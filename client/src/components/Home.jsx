@@ -9,6 +9,7 @@ export default function Home({ socket }) {
 	function HandleSubmit(e) {
 		e.preventDefault()
 		localStorage.setItem('user', user)
+		socket.emit('newUser', { user, socketID: socket.id })
 		navigate('/chat')
 	}
 

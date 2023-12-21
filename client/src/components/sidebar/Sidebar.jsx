@@ -1,12 +1,13 @@
 import styles from './styles.module.css'
-export default function Sidebar() {
+
+export default function Sidebar({ socket, users }) {
 	return (
 		<div className={styles.sidebar}>
 			<h4 className={styles.header}>Users</h4>
 			<ul className={styles.users}>
-				<li>User 1</li>
-				<li>User 2</li>
-				<li>User 3</li>
+				{users.map(element => (
+					<li key={element.socketID}>{element.user}</li>
+				))}
 			</ul>
 		</div>
 	)

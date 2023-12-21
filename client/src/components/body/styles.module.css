@@ -20,6 +20,7 @@
 	background-color: #fff;
 	padding: 20px;
 	overflow-y: scroll;
+	position: relative;
 }
 
 .container > * {
@@ -48,4 +49,11 @@
 	border-radius: 10px;
 	margin-left: auto;
 	font-size: 15px;
+}
+.status {
+	position: absolute;
+	font-size: 13px;
+	font-style: italic;
+	bottom: 0px;
+	left: 70px;
 }
